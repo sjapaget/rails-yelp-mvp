@@ -19,7 +19,6 @@ class RestaurantsController < ApplicationController
     else
       render new_restaurant_path
     end
-
   end
 
   private
