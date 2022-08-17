@@ -12,6 +12,11 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-light bg_light">
+      <%= link_to "See All Restaurants", restaurants_path %>
+      <%= link_to "Add Restaurant", new_restaurant_path %>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

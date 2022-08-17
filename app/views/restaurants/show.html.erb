@@ -3,7 +3,7 @@
     <div class="col-6 mx-auto">
       <h1><%= @restaurant.name %></h1>
     </div>
-    
+
     <h3>Details:</h3>
     <p>Address: <%= @restaurant.address %></p>
     <p>Tel: <%= @restaurant.phone_number %></p>
@@ -11,6 +11,7 @@
   </div>
 
   <h3>Reviews:</h3>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
   <% @restaurant.reviews.each do |review| %>
     <div class="d-flex row border rounded border-dark mt-1">
       <p class="col-3"><%= review.rating %> / 5</p>
