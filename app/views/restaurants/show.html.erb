@@ -1,2 +1,20 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="container mx-auto">
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <h1><%= @restaurant.name %></h1>
+    </div>
+    
+    <h3>Details:</h3>
+    <p>Address: <%= @restaurant.address %></p>
+    <p>Tel: <%= @restaurant.phone_number %></p>
+    <p>Category: <%= @restaurant.category %></p>
+  </div>
+
+  <h3>Reviews:</h3>
+  <% @restaurant.reviews.each do |review| %>
+    <div class="d-flex row border rounded border-dark mt-1">
+      <p class="col-3"><%= review.rating %> / 5</p>
+      <p class="col-9"><%= review.content %></p>
+    </div>
+  <% end %>
+</div>
